@@ -75,28 +75,28 @@ const CHARACTERS = [
 ];
 
 const AWARDS = [
-  { id: 'uni', label: 'En İyi Üniversiteye Gider', icon: '🎓', chipClass: 'chip-uni', colClass: 'award-col-uni', badgeStyle: 'background:var(--award-uni-light);color:var(--award-uni)' },
-  { id: 'viral', label: 'Herkesin Dilinde', icon: '🔥', chipClass: 'chip-viral', colClass: 'award-col-viral', badgeStyle: 'background:var(--award-viral-light);color:var(--award-viral)' },
-  { id: 'trouble', label: 'Baş Belası', icon: '😈', chipClass: 'chip-trouble', colClass: 'award-col-trouble', badgeStyle: 'background:var(--award-trouble-light);color:var(--award-trouble)' }
+  { id: 'uni', label: 'Geleceği Tasarlayan', icon: '🎓', chipClass: 'chip-uni', colClass: 'award-col-uni', badgeStyle: 'background:var(--award-uni-light);color:var(--award-uni)' },
+  { id: 'viral', label: 'İz Bırakan', icon: '✨', chipClass: 'chip-viral', colClass: 'award-col-viral', badgeStyle: 'background:var(--award-viral-light);color:var(--award-viral)' },
+  { id: 'trouble', label: 'Ezber Bozan', icon: '⚡', chipClass: 'chip-trouble', colClass: 'award-col-trouble', badgeStyle: 'background:var(--award-trouble-light);color:var(--award-trouble)' }
 ];
 
 // 27 traits total — 9 per award category (matching the original site)
 const TRAITS = [
-  // ── "En İyi Üniversiteye Gider" traits (9) ──
+  // ── "Geleceği Tasarlayan" traits (9) ──
   { id: 'uyumlu',      label: 'Uyumlu',        emoji: '🤝', scores: { uni: 5, viral: 2, trouble: 1 } },
   { id: 'cesur',       label: 'Cesur',          emoji: '🦁', scores: { uni: 4, viral: 3, trouble: 2 } },
   { id: 'yaratici',    label: 'Yaratıcı',       emoji: '🎨', scores: { uni: 5, viral: 3, trouble: 1 } },
   { id: 'kararli',     label: 'Kararlı',        emoji: '💪', scores: { uni: 5, viral: 2, trouble: 2 } },
   { id: 'bagimsiz',    label: 'Bağımsız',       emoji: '🦅', scores: { uni: 4, viral: 3, trouble: 3 } },
-  { id: 'muzikal',     label: 'Müzikal',        emoji: '🎵', scores: { uni: 3, viral: 4, trouble: 1 } },
+  { id: 'muzik',     label: 'Müzik Kulağı Olan',        emoji: '🎵', scores: { uni: 3, viral: 4, trouble: 1 } },
   { id: 'isyankar',    label: 'İsyankâr',       emoji: '✊', scores: { uni: 2, viral: 3, trouble: 5 } },
-  { id: 'teatral',     label: 'Teatral',        emoji: '🎭', scores: { uni: 3, viral: 5, trouble: 2 } },
+  { id: 'rolyetenekli',     label: 'Rol Yeteneği Yüksek',        emoji: '🎭', scores: { uni: 3, viral: 5, trouble: 2 } },
   { id: 'cigiracici',  label: 'Çığır Açan',     emoji: '🚀', scores: { uni: 5, viral: 4, trouble: 1 } },
 
-  // ── "Herkesin Dilinde" traits (9) ──
+  // ── "İz Bırakan" traits (9) ──
   { id: 'maceraci',    label: 'Maceracı',       emoji: '🧭', scores: { uni: 2, viral: 5, trouble: 3 } },
   { id: 'atletik',     label: 'Atletik',        emoji: '🏃', scores: { uni: 2, viral: 5, trouble: 2 } },
-  { id: 'hesapci',     label: 'Hesapçı',        emoji: '🧮', scores: { uni: 4, viral: 3, trouble: 3 } },
+  { id: 'stratejik',     label: 'Stratejik',        emoji: '🧮', scores: { uni: 4, viral: 3, trouble: 3 } },
   { id: 'adanmis',     label: 'Adanmış',        emoji: '🎯', scores: { uni: 3, viral: 4, trouble: 1 } },
   { id: 'gozupek',     label: 'Gözüpek',        emoji: '🔥', scores: { uni: 1, viral: 5, trouble: 4 } },
   { id: 'meydanokuyan',label: 'Meydan Okuyan',  emoji: '⚡', scores: { uni: 1, viral: 4, trouble: 5 } },
@@ -104,29 +104,29 @@ const TRAITS = [
   { id: 'komik',       label: 'Komik',          emoji: '😂', scores: { uni: 1, viral: 5, trouble: 3 } },
   { id: 'etkili',      label: 'Etkili',         emoji: '👑', scores: { uni: 4, viral: 5, trouble: 2 } },
 
-  // ── "Baş Belası" traits (9) ──
-  { id: 'saldirgan',   label: 'Saldırgan',      emoji: '💥', scores: { uni: 1, viral: 3, trouble: 5 } },
+  // ── "Ezber Bozan" traits (9) ──
+  { id: 'mucadeceli',   label: 'Mücadeleci',      emoji: '💥', scores: { uni: 1, viral: 3, trouble: 5 } },
   { id: 'buyuleyici',  label: 'Büyüleyici',     emoji: '✨', scores: { uni: 3, viral: 5, trouble: 2 } },
   { id: 'ozverili',    label: 'Özverili',       emoji: '🤲', scores: { uni: 4, viral: 2, trouble: 1 } },
   { id: 'azimli',      label: 'Azimli',         emoji: '🔨', scores: { uni: 4, viral: 3, trouble: 3 } },
   { id: 'cokdilli',    label: 'Çok Dilli',      emoji: '🌍', scores: { uni: 5, viral: 3, trouble: 1 } },
   { id: 'sakaci',      label: 'Şakacı',         emoji: '🃏', scores: { uni: 1, viral: 4, trouble: 4 } },
-  { id: 'amansiz',     label: 'Amansız',        emoji: '🐺', scores: { uni: 2, viral: 3, trouble: 5 } },
-  { id: 'sert',        label: 'Sert',           emoji: '🪨', scores: { uni: 1, viral: 2, trouble: 5 } },
-  { id: 'kindar',      label: 'Kindar',         emoji: '🗡️', scores: { uni: 1, viral: 2, trouble: 5 } }
+  { id: 'pesetmeyen',     label: 'Pes Etmeyen',        emoji: '🐺', scores: { uni: 2, viral: 3, trouble: 5 } },
+  { id: 'tavizvermeyen',        label: 'Taviz Vermeyen',           emoji: '🪨', scores: { uni: 1, viral: 2, trouble: 5 } },
+  { id: 'tutkulu',      label: 'Tutkulu',         emoji: '🗡️', scores: { uni: 1, viral: 2, trouble: 5 } }
 ];
 
 // Character trait mappings (which traits describe each character)
 const CHAR_TRAITS = {
   ataturk:   ['kararli', 'cigiracici', 'cesur', 'etkili', 'azimli', 'bagimsiz', 'disiplinli', 'adanmis'],
-  piri_reis: ['maceraci', 'yaratici', 'cigiracici', 'cesur', 'gozupek', 'cokdilli', 'bagimsiz', 'hesapci'],
-  mevlana:   ['yaratici', 'buyuleyici', 'muzikal', 'uyumlu', 'teatral', 'ozverili', 'cokdilli', 'etkili'],
-  fatih:     ['kararli', 'saldirgan', 'hesapci', 'gozupek', 'azimli', 'amansiz', 'cesur', 'etkili'],
-  sait_faik: ['yaratici', 'bagimsiz', 'teatral', 'uyumlu', 'komik', 'buyuleyici', 'ozverili', 'isyankar'],
+  piri_reis: ['maceraci', 'yaratici', 'cigiracici', 'cesur', 'gozupek', 'cokdilli', 'bagimsiz', 'stratejik'],
+  mevlana:   ['yaratici', 'buyuleyici', 'muzik', 'uyumlu', 'rolyetenekli', 'ozverili', 'cokdilli', 'etkili'],
+  fatih:     ['kararli', 'mucadeceli', 'stratejik', 'gozupek', 'azimli', 'pesetmeyen', 'cesur', 'etkili'],
+  sait_faik: ['yaratici', 'bagimsiz', 'rolyetenekli', 'uyumlu', 'komik', 'buyuleyici', 'ozverili', 'isyankar'],
   sabiha:    ['cesur', 'gozupek', 'kararli', 'cigiracici', 'maceraci', 'disiplinli', 'azimli', 'adanmis'],
   nazim:     ['yaratici', 'isyankar', 'meydanokuyan', 'cesur', 'etkili', 'bagimsiz', 'adanmis', 'buyuleyici'],
-  yunus:     ['uyumlu', 'muzikal', 'buyuleyici', 'yaratici', 'ozverili', 'teatral', 'cokdilli', 'adanmis'],
-  hurrem:    ['hesapci', 'etkili', 'buyuleyici', 'sert', 'kararli', 'amansiz', 'sakaci', 'kindar']
+  yunus:     ['uyumlu', 'muzik', 'buyuleyici', 'yaratici', 'ozverili', 'rolyetenekli', 'cokdilli', 'adanmis'],
+  hurrem:    ['stratejik', 'etkili', 'buyuleyici', 'tavizvermeyen', 'kararli', 'pesetmeyen', 'sakaci', 'tutkulu']
 };
 
 // ─── STATE ─────────────────────────────────────────────────────────────────
