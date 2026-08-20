@@ -270,7 +270,7 @@ html, body {
 .chip-viral { background: var(--award-viral-light);   color: var(--award-viral); }
 .chip-trouble { background: var(--award-trouble-light); color: var(--award-trouble); }
 
-/* ─── STEP 3 — CHARACTERS ───────────────────────────────────── */
+/* ─── STEP 4 — CHARACTERS ───────────────────────────────────── */
 .characters-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -319,7 +319,7 @@ html, body {
   color: var(--muted);
 }
 
-/* ─── STEP 4 — PREDICTIONS ──────────────────────────────────── */
+/* ─── STEP 5 — PREDICTIONS ──────────────────────────────────── */
 .predictions-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -388,8 +388,8 @@ html, body {
 .select-option:hover { background: var(--cream); }
 .select-option.selected { background: var(--blue-light); color: var(--blue); }
 
-/* ─── STEP 5 — TRAIN (CARD-BASED) ───────────────────────────── */
-#screen-5 { padding-bottom: 120px; align-items: center; }
+/* ─── STEP 6 — TRAIN (CARD-BASED) ───────────────────────────── */
+#screen-6 { padding-bottom: 120px; align-items: center; }
 
 /* Big trait card showcase */
 .trait-showcase {
@@ -511,20 +511,7 @@ html, body {
 }
 .assigned-trait .remove-assigned:hover { opacity: 1; }
 
-/* ─── STEP 6 — FINE TUNE ────────────────────────────────────── */
-.tabs { display: flex; gap: 4px; margin-bottom: 24px; }
-.tab {
-  border-radius: 100px; border: none;
-  padding: 8px 20px;
-  font-family: var(--font); font-size: .85rem; font-weight: 800;
-  cursor: pointer; transition: var(--transition);
-  background: var(--white); color: var(--muted);
-}
-.tab:hover { background: var(--cream); }
-.tab.active-uni     { background: var(--award-uni);     color: white; }
-.tab.active-viral   { background: var(--award-viral);   color: white; }
-.tab.active-trouble { background: var(--award-trouble); color: white; }
-.priority-list { max-width: 480px; }
+/* ─── STEP 7 — FINE TUNE ────────────────────────────────────── */
 .priority-item {
   background: var(--white);
   border-radius: 12px;
@@ -551,7 +538,7 @@ html, body {
 .priority-handle { font-size: 1.1rem; opacity: .35; }
 .empty-priority { font-size: .9rem; color: var(--muted); text-align: center; padding: 32px; }
 
-/* ─── STEP 7 — RESULTS ──────────────────────────────────────── */
+/* ─── STEP 8 — RESULTS ──────────────────────────────────────── */
 .results-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -606,7 +593,7 @@ html, body {
 .match-yes { background: #D1FAE5; color: #065F46; }
 .match-no  { background: #FEE2E2; color: #991B1B; }
 
-/* ─── STEPS 8-10 — REFLECTION ───────────────────────────────── */
+/* ─── STEPS 9-11 — REFLECTION ───────────────────────────────── */
 .reflection-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -655,19 +642,19 @@ html, body {
 .bias-content p { font-size: .82rem; color: var(--muted); line-height: 1.55; }
 
 /* Final screen */
-#screen-10 {
+#screen-11 {
   align-items: center; justify-content: center;
   text-align: center;
   background: linear-gradient(160deg, var(--dark) 0%, #334155 100%);
   color: white;
 }
-#screen-10 h1 {
+#screen-11 h1 {
   font-size: 2.8rem; font-weight: 900;
   background: linear-gradient(135deg, var(--gold), var(--red-light));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   margin-bottom: 16px;
 }
-#screen-10 p { font-size: 1.05rem; color: #94A3B8; max-width: 520px; line-height: 1.7; margin: 0 auto 32px; }
+#screen-11 > p { font-size: 1.05rem; color: #94A3B8; max-width: 520px; line-height: 1.7; margin: 0 auto 32px; }
 .final-points { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
 .final-point {
   background: rgba(255,255,255,.07);
@@ -680,10 +667,14 @@ html, body {
 .final-point .fp-icon { font-size: 1.8rem; margin-bottom: 8px; }
 .final-point h4 { font-size: .88rem; font-weight: 900; margin-bottom: 4px; }
 .final-point p { font-size: .78rem; color: #94A3B8; }
-#screen-10 .btn-restart {
+#screen-11 .btn-restart {
   background: linear-gradient(135deg, var(--red), var(--gold));
   color: white; box-shadow: 0 4px 20px rgba(230,57,70,.3);
 }
+#screen-11 .final-points { max-width: 860px; width: 100%; }
+#screen-11 .story-card { max-width: 860px; padding: 24px 32px; text-align: left; margin-top: 10px; }
+#screen-11 .final-point p { font-size: .78rem; color: #94A3B8; }
+
 
 /* ─── UTILITY ───────────────────────────────────────────────── */
 .spacer { height: 32px; }
@@ -717,3 +708,100 @@ html, body {
 .modal-years { font-size: .82rem; color: var(--muted); margin-bottom: 12px; }
 .modal-bio { font-size: .9rem; color: var(--muted); line-height: 1.65; }
 .modal-close { margin-top: 20px; }
+
+/* ─── SCHOOL NAME INPUT ─────────────────────────────────────── */
+.school-name-input-section { margin-bottom: 28px; }
+.school-input-card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 28px 32px; box-shadow: var(--shadow);
+  max-width: 680px; margin: 0 auto; text-align: center;
+}
+.school-input-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.school-input-card h3 { font-size: 1.4rem; font-weight: 900; margin-bottom: 8px; }
+.school-input-card p { color: var(--muted); font-size: .95rem; line-height: 1.6; margin-bottom: 20px; }
+.school-input-wrap { max-width: 420px; margin: 0 auto; }
+#school-name-input {
+  width: 100%; padding: 14px 18px;
+  border: 2px solid var(--border); border-radius: 12px;
+  font-family: var(--font); font-size: 1rem; font-weight: 600;
+  outline: none; transition: var(--transition); text-align: center;
+}
+#school-name-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+.school-input-hint { font-size: .75rem; color: var(--muted); margin-top: 8px; }
+
+/* ─── NAME PICKER (Step 3) ──────────────────────────────────── */
+.name-picker-section { max-width: 860px; margin: 0 auto; width: 100%; }
+.name-picker-counts { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.name-count-badge { padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: .95rem; }
+.name-count-girl { background: #FCE7F3; color: #BE185D; }
+.name-count-boy { background: #DBEAFE; color: #1D4ED8; }
+.name-picker-search {
+  width: 100%; max-width: 380px; display: block; margin: 0 auto 24px;
+  padding: 10px 18px; border: 2px solid var(--border); border-radius: 100px;
+  font-family: var(--font); font-size: .9rem; outline: none; transition: var(--transition);
+}
+.name-picker-search:focus { border-color: var(--blue); }
+.name-gender-section { margin-bottom: 28px; }
+.name-gender-title { font-weight: 900; font-size: 1rem; margin-bottom: 14px; }
+.name-gender-title.girl-title { color: #BE185D; }
+.name-gender-title.boy-title { color: #1D4ED8; }
+.name-chips-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.name-chip {
+  padding: 8px 18px; border-radius: 100px;
+  border: 2px solid var(--border); background: var(--white);
+  font-family: var(--font); font-size: .82rem; font-weight: 700;
+  cursor: pointer; transition: var(--transition); color: var(--dark);
+}
+.name-chip:hover:not(.chip-disabled) { border-color: var(--blue-light); transform: translateY(-1px); }
+.name-chip.selected-girl { background: #FCE7F3; border-color: #BE185D; color: #BE185D; }
+.name-chip.selected-boy { background: #DBEAFE; border-color: #1D4ED8; color: #1D4ED8; }
+.name-chip.chip-disabled { opacity: .35; cursor: not-allowed; }
+.name-selection-error {
+  background: #FEE2E2; color: #991B1B; border-radius: 12px;
+  padding: 14px 20px; font-size: .88rem; font-weight: 700;
+  text-align: center; margin-top: 16px; border: 1px solid #FECACA;
+}
+
+/* ─── STEP 5 ERROR ──────────────────────────────────────────── */
+.step5-error {
+  background: #FEE2E2; color: #991B1B; border-radius: 12px;
+  padding: 14px 20px; font-size: .88rem; font-weight: 700;
+  max-width: 700px; text-align: center; margin: 0 auto 16px;
+  border: 1px solid #FECACA;
+}
+
+/* ─── PRIORITY COLUMNS (Step 7) ─────────────────────────────── */
+.priority-columns {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; width: 100%; max-width: 960px;
+}
+.priority-column {
+  background: var(--white); border-radius: var(--radius);
+  padding: 16px 14px; box-shadow: var(--shadow);
+}
+.priority-col-head { font-weight: 900; font-size: .85rem; margin-bottom: 6px; }
+.priority-col-uni .priority-col-head { color: var(--award-uni); }
+.priority-col-viral .priority-col-head { color: var(--award-viral); }
+.priority-col-trouble .priority-col-head { color: var(--award-trouble); }
+.priority-col-hint { font-size: .72rem; color: var(--muted); margin-bottom: 12px; }
+.priority-column .priority-list { max-width: none; }
+
+/* ─── HOW IT WORKS (Screen 1) ───────────────────────────────── */
+.how-it-works { margin-top: 32px; }
+.how-title { font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 16px; }
+.steps-overview { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.step-ov {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--white); border-radius: 100px;
+  padding: 8px 18px; box-shadow: var(--shadow);
+  font-size: .82rem; font-weight: 700;
+}
+.step-ov-num {
+  width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--red), var(--gold));
+  color: white; display: flex; align-items: center; justify-content: center;
+  font-size: .7rem; font-weight: 900;
+}
+
+/* ─── COMPARE LEGEND ────────────────────────────────────────── */
+.compare-legend { font-size: .82rem; color: var(--muted); margin-top: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>En Olası Makine — Algoritma ve Önyargı</title>
-  <meta name="description" content="Türk tarihî figürlerle algoritmayı öğren ve algoritmik önyargıyı keşfet. Ortaokul öğrencileri için interaktif eğitim deneyimi.">
+  <title>En Olası Makine — Algoritma ve Ön Yargı</title>
+  <meta name="description" content="Kendi sınıfını seç, algoritmayı eğit ve algoritmik ön yargıyı keşfet. Ortaokul öğrencileri için interaktif eğitim deneyimi.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
   <!-- Header -->
   <div id="header">
     <div class="logo">En <span>Olası</span> Makine</div>
-    <div id="step-indicator">Adım 1 / 10</div>
+    <div id="step-indicator">Adım 1 / 11</div>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════
@@ -25,7 +25,7 @@
   <section class="screen active" id="screen-1">
     <div class="hero-badge">🇹🇷 Türkçe Eğitim Deneyimi</div>
     <h1>En Olası Makine</h1>
-    <p class="tagline">Algoritmaların nasıl çalıştığını ve neden bazen haksız kararlar verdiğini keşfet. Tarihin ünlü Türk isimlerini kullanarak kendi algoritmani yaz!</p>
+    <p class="tagline">Algoritmalar nasıl karar alır? Neden bazen haksız olabilirler? Kendi sınıfını kur, algoritmayı eğit ve gerçeği keşfet!</p>
 
     <div class="objectives-grid">
       <div class="obj-card">
@@ -35,13 +35,24 @@
       </div>
       <div class="obj-card">
         <div class="obj-icon">⚖️</div>
-        <div class="obj-title">Algoritmik Önyargı</div>
-        <div class="obj-desc">Algoritmaların insanlar gibi hataları ve önyargıları nasıl yansıtabileceğini gör.</div>
+        <div class="obj-title">Algoritmik Ön Yargı</div>
+        <div class="obj-desc">Algoritmaların insanlar gibi hataları ve ön yargıları nasıl yansıtabileceğini gör.</div>
       </div>
       <div class="obj-card">
         <div class="obj-icon">💡</div>
         <div class="obj-title">Eleştirel Düşünce</div>
         <div class="obj-desc">Teknolojik sistemleri sorgulamayı ve daha adil tasarım yollarını araştırmayı keşfet.</div>
+      </div>
+    </div>
+    
+    <div class="how-it-works">
+      <h3 class="how-title">Nasıl Çalışır?</h3>
+      <div class="steps-overview">
+        <div class="step-ov"><span class="step-ov-num">1</span><span>Okulunu ve sınıfını oluştur</span></div>
+        <div class="step-ov"><span class="step-ov-num">2</span><span>Ödül tahminini yap</span></div>
+        <div class="step-ov"><span class="step-ov-num">3</span><span>Algoritmayı eğit</span></div>
+        <div class="step-ov"><span class="step-ov-num">4</span><span>Sonuçları karşılaştır</span></div>
+        <div class="step-ov"><span class="step-ov-num">5</span><span>Ön yargıyı keşfet</span></div>
       </div>
     </div>
   </section>
@@ -51,15 +62,28 @@
   ═══════════════════════════════════════════════════════ -->
   <section class="screen" id="screen-2">
     <div class="screen-subtitle">Senaryo</div>
-    <h2 class="screen-title">Şeref Ortaokulu'na Hoş Geldin!</h2>
+    <h2 class="screen-title">Okula Hoş Geldin!</h2>
+    
+    <div class="school-name-input-section">
+      <div class="school-input-card">
+        <div class="school-input-icon">🏫</div>
+        <h3>Senin okulun hangisi?</h3>
+        <p>Uygulama boyunca senin okulunun adını kullanacağız. Kendi okulunun adını ya da hayalindeki okulu yazabilirsin!</p>
+        <div class="school-input-wrap">
+          <input type="text" id="school-name-input" placeholder="Okulunun adını yaz..." maxlength="60" autocomplete="off">
+          <div class="school-input-hint">Örnek: Atatürk Ortaokulu, Fatih Ortaokulu, Mavi Gökyüzü Ortaokulu...</div>
+        </div>
+      </div>
+    </div>
+
     <div class="story-card">
-      <div class="school-badge">🏫 Şeref Anadolu Ortaokulu &nbsp;·&nbsp; İstanbul</div>
+      <div class="school-badge">🏫 <span class="school-name-display">Okulun</span> &nbsp;·&nbsp; İstanbul</div>
       <h2>Bir Algoritma Karar Verseydi...</h2>
       <p>
-        Şeref Ortaokulu'nun yıl sonu ödül töreni yaklaşıyor. Okul müdürü bu yıl çok farklı bir şey denemek istiyor: ödülleri öğrencileri değil, bir <strong>algoritma</strong> belirleyecek!
+        <span class="school-name-display">Okulun</span>'un yıl sonu ödül töreni yaklaşıyor. Okul müdürü bu yıl çok farklı bir şey denemek istiyor: ödülleri öğrencileri değil, bir <strong>algoritma</strong> belirleyecek!
       </p>
       <p>
-        Bu algoritmayı <strong>sen</strong> eğiteceksin. Ama önce sınıfı tanımamız gerekiyor. Bu yıl dokuz özel öğrenci bu ödüller için yarışıyor — hepsi Türk ve dünya tarihinin ünlü isimlerini temsil ediyor.
+        Bu algoritmayı <strong>sen</strong> eğiteceksin. Ama önce sınıfı tanımamız gerekiyor. Bu yıl on öğrenci bu ödüller için yarışıyor — hepsi senin sınıfından.
       </p>
       <p>
         Üç büyük ödül sahiplerini bekliyor:
@@ -77,20 +101,50 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 3 — SINIFLA TANIŞ
+       SCREEN 3 — İSİM SEÇİMİ
   ═══════════════════════════════════════════════════════ -->
   <section class="screen" id="screen-3">
     <div class="screen-subtitle">Adım 3</div>
+    <h2 class="screen-title">Sınıfını Oluştur</h2>
+    <p class="screen-body" style="margin-bottom:20px;">Sınıfındaki 10 öğrencinin isimlerini seç — 5 kız, 5 erkek. İstediğin isimlere tıkla!</p>
+    
+    <div class="name-picker-section">
+      <div class="name-picker-counts">
+        <div class="name-count-badge name-count-girl" id="count-girl">👧 Kız: 0 / 5 seçildi</div>
+        <div class="name-count-badge name-count-boy" id="count-boy">👦 Erkek: 0 / 5 seçildi</div>
+      </div>
+      
+      <input type="text" class="name-picker-search" id="name-search" placeholder="🔍 İsim ara...">
+      
+      <div class="name-gender-section" id="girl-names-section">
+        <div class="name-gender-title girl-title">👧 Kız İsimleri</div>
+        <div class="name-chips-grid" id="girl-chips"></div>
+      </div>
+      
+      <div class="name-gender-section" id="boy-names-section">
+        <div class="name-gender-title boy-title">👦 Erkek İsimleri</div>
+        <div class="name-chips-grid" id="boy-chips"></div>
+      </div>
+      
+      <div class="name-selection-error" id="name-selection-error" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCREEN 4 — SINIFLA TANIŞ
+  ═══════════════════════════════════════════════════════ -->
+  <section class="screen" id="screen-4">
+    <div class="screen-subtitle">Adım 4</div>
     <h2 class="screen-title">Sınıfla Tanış</h2>
-    <p class="screen-body" style="margin-bottom:24px;">Dokuz tarihi Türk figürü bu yıl senin okulunda okuyor. Kartlara tıklayarak onları daha yakından tanı!</p>
+    <p class="screen-body" style="margin-bottom:24px;">Sınıfındaki on öğrenci bu yıl senin okulunda okuyor. Kartlara tıklayarak onları daha yakından tanı!</p>
     <div class="characters-grid" id="characters-grid"></div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 4 — TAHMİNLER
+       SCREEN 5 — TAHMİNLER
   ═══════════════════════════════════════════════════════ -->
-  <section class="screen" id="screen-4">
-    <div class="screen-subtitle">Adım 4</div>
+  <section class="screen" id="screen-5">
+    <div class="screen-subtitle">Adım 5</div>
     <h2 class="screen-title">Tahminini Yap</h2>
     <div class="predictions-layout">
       <div class="predictions-info">
@@ -142,12 +196,14 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 5 — ALGORİTMAYI EĞİT (TEK TEK SEÇİM)
+       SCREEN 6 — ALGORİTMAYI EĞİT (TEK TEK SEÇİM)
   ═══════════════════════════════════════════════════════ -->
-  <section class="screen" id="screen-5">
-    <div class="screen-subtitle">Adım 5</div>
+  <section class="screen" id="screen-6">
+    <div class="screen-subtitle">Adım 6</div>
     <h2 class="screen-title">Algoritmayı Eğit</h2>
     <p class="screen-body" style="margin-bottom:20px;">Her özellik için hangi ödüle ait olduğunu seç. Algoritma bu eşleştirmelere göre kazananı belirleyecek!</p>
+
+    <div class="step5-error" id="step5-error" style="display:none"></div>
 
     <!-- Current trait card -->
     <div class="trait-showcase" id="trait-showcase">
@@ -198,54 +254,69 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 6 — İNCE AYAR
-  ═══════════════════════════════════════════════════════ -->
-  <section class="screen" id="screen-6">
-    <div class="screen-subtitle">Adım 6</div>
-    <h2 class="screen-title">Öncelikleri Sırala</h2>
-    <p class="screen-body" style="margin-bottom:24px;">Her ödül için hangi özellik daha önemli? Sürükleyerek sırala — en üstteki özellik algoritmada en yüksek ağırlığı alır.</p>
-
-    <div class="tabs">
-      <button class="tab active-uni" id="tab-uni">🎓 Geleceği Tasarlayan</button>
-      <button class="tab" id="tab-viral">✨ İz Bırakan</button>
-      <button class="tab" id="tab-trouble">⚡ Ezber Bozan</button>
-    </div>
-
-    <div class="priority-list" id="priority-list"></div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════
-       SCREEN 7 — SONUÇLAR
+       SCREEN 7 — İNCE AYAR
   ═══════════════════════════════════════════════════════ -->
   <section class="screen" id="screen-7">
     <div class="screen-subtitle">Adım 7</div>
+    <h2 class="screen-title">Öncelikleri Sırala</h2>
+    <p class="screen-body" style="margin-bottom:24px;">Her ödül için sıfatları önem sırasına göre sürükle-bırak ile sırala. En üstteki sıfat o ödül için en önemli sayılır ve algoritma kararında daha fazla ağırlık alır.</p>
+
+    <div class="priority-columns">
+      <div class="priority-column priority-col-uni">
+        <div class="priority-col-head">🎓 Geleceği Tasarlayan</div>
+        <p class="priority-col-hint">En önemli → En az önemli</p>
+        <div class="priority-list" id="priority-list-uni"></div>
+      </div>
+      <div class="priority-column priority-col-viral">
+        <div class="priority-col-head">✨ İz Bırakan</div>
+        <p class="priority-col-hint">En önemli → En az önemli</p>
+        <div class="priority-list" id="priority-list-viral"></div>
+      </div>
+      <div class="priority-column priority-col-trouble">
+        <div class="priority-col-head">⚡ Ezber Bozan</div>
+        <p class="priority-col-hint">En önemli → En az önemli</p>
+        <div class="priority-list" id="priority-list-trouble"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCREEN 8 — SONUÇLAR
+  ═══════════════════════════════════════════════════════ -->
+  <section class="screen" id="screen-8">
+    <div class="screen-subtitle">Adım 8</div>
     <h2 class="screen-title">Algoritma Konuştu! 🤖</h2>
-    <p class="screen-body" style="margin-bottom:24px;">İşte senin kurduğun algoritmanın verdiği kararlar. Sence adil mi?</p>
+    <p class="screen-body" style="margin-bottom:24px;">Algoritma, senin belirlediğin kurallara göre her öğrencinin puanını hesapladı ve en yüksek puanı alanı ödüle layık gördü. Sence adil mi?</p>
 
     <div class="results-grid" id="results-grid"></div>
 
     <div class="compare-section">
-      <h3>📊 Senin Tahminlerin vs Algoritma</h3>
+      <h3>📊 Senin Tahminlerin — Algoritmanın Kararı</h3>
       <div id="compare-list"></div>
+      <div class="compare-legend">
+        <span class="match-badge match-yes">✓ Uyuştu</span> Hem sen hem algoritma aynı öğrenciyi seçti!
+        &nbsp;&nbsp;
+        <span class="match-badge match-no">✗ Farklı</span> Algoritma farklı düşündü — neden acaba?
+      </div>
     </div>
 
     <div class="spacer"></div>
     <div class="story-card" style="max-width:780px;">
       <h2 style="font-size:1.1rem;">🤔 Ne düşünüyorsun?</h2>
-      <p>Algoritmanın kararları seni şaşırttı mı? Haksız ya da mantıksız gelen bir şey var mı? Ileriki adımlarda neden böyle olduğunu birlikte keşfedeceğiz.</p>
+      <p>Algoritmanın kararları seni şaşırttı mı? Haksız ya da mantıksız gelen bir şey var mı? İleriki adımlarda neden böyle olduğunu birlikte keşfedeceğiz.</p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 8 — ÖNYARGI: EKSİK BİLGİ
+       SCREEN 9 — ÖN YARGI
   ═══════════════════════════════════════════════════════ -->
-  <section class="screen" id="screen-8">
-    <div class="screen-subtitle">Adım 8 — Algoritmik Önyargı</div>
+  <section class="screen" id="screen-9">
+    <div class="screen-subtitle">Adım 9 — Algoritmik Ön Yargı</div>
     <h2 class="screen-title">Neden Adaletsiz Olabilir?</h2>
 
     <div class="reflection-layout">
       <div class="reflection-text">
-        <p class="screen-body">Algoritmalar genellikle üç temel nedenden dolayı önyargılı hale gelir. Bu sorunları anlamak, daha adil teknolojiler tasarlamamıza yardımcı olur.</p>
+        <p class="screen-body">Algoritmalar genellikle üç temel nedenden dolayı ön yargılı hale gelir. Bu sorunları anlamak, daha adil teknolojiler tasarlamamıza yardımcı olur.</p>
 
         <div class="bias-types">
           <div class="bias-item">
@@ -258,8 +329,8 @@
           <div class="bias-item">
             <div class="bias-num">2</div>
             <div class="bias-content">
-              <h4>İnsan Önyargısını Yansıtma</h4>
-              <p>Algoritmayı tasarlayan insanların önyargıları, farkında olmadan sisteme işlenir. Makine bu önyargıları daha büyük ölçekte uygular.</p>
+              <h4>İnsan Ön Yargısını Yansıtma</h4>
+              <p>Algoritmayı tasarlayan insanların ön yargıları, farkında olmadan sisteme işlenir. Makine bu ön yargıları daha büyük ölçekte uygular.</p>
             </div>
           </div>
           <div class="bias-item">
@@ -274,9 +345,9 @@
 
       <div class="example-box">
         <span class="ex-tag">📱 Gerçek Dünya Örneği</span>
-        <h4>YouTube'un Öneri Algoritması</h4>
+        <h4>İçerik Öneri Algoritmaları</h4>
         <p>
-          YouTube'un algoritması sana daha fazla izletmek için videoları sıralar. Ama bu süreçte aşırı içerikler, dezenformasyon ya da nefret söylemi yayabilir — çünkü bunlar insanları "meşgul" tutabilir.
+          Video platformları ve sosyal medya uygulamalarının öneri algoritmaları, seni daha uzun süre uygulamada tutmak için içerikleri sıralar. Ama bu süreçte aşırı içerikler, yanlış bilgi ya da zararlı söylem yayılabilir — çünkü bunlar insanları "meşgul" tutabilir.
         </p>
         <br>
         <p>
@@ -287,12 +358,12 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 9 — GERÇEK ÖRNEKLER
+       SCREEN 10 — GERÇEK ÖRNEKLER
   ═══════════════════════════════════════════════════════ -->
-  <section class="screen" id="screen-9">
-    <div class="screen-subtitle">Adım 9 — Gerçekten Oldu</div>
+  <section class="screen" id="screen-10">
+    <div class="screen-subtitle">Adım 10 — Gerçekten Oldu</div>
     <h2 class="screen-title">Algoritmalar Gerçekten Hata Yaptı</h2>
-    <p class="screen-body" style="margin-bottom:28px;">Bu örnekler gerçek. Algoritmik önyargı sadece teorik bir kavram değil — bugün insanların hayatını etkiliyor.</p>
+    <p class="screen-body" style="margin-bottom:28px;">Bu örnekler gerçek. Algoritmik ön yargı sadece teorik bir kavram değil — bugün insanların hayatını etkiliyor.</p>
 
     <div class="reflection-layout">
       <div style="display:flex;flex-direction:column;gap:16px;">
@@ -326,11 +397,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
-       SCREEN 10 — TAMAMLANDI
+       SCREEN 11 — TAMAMLANDI
   ═══════════════════════════════════════════════════════ -->
-  <section class="screen" id="screen-10">
-    <h1>Tebrikler! 🎉</h1>
-    <p>Kendi algoritmani yazdın, sonuçları gördün ve algoritmik önyargının gerçek hayattaki etkilerini keşfettin. Artık daha bilinçli bir teknoloji kullanıcısısın!</p>
+  <section class="screen" id="screen-11">
+    <h1>🎉</h1>
+    <p>Kendi algoritmani yazdın, sonuçları gördün ve algoritmik ön yargının gerçek hayattaki etkilerini keşfettin. Artık daha bilinçli bir teknoloji kullanıcısısın!</p>
 
     <div class="final-points">
       <div class="final-point">
@@ -340,7 +411,7 @@
       </div>
       <div class="final-point">
         <div class="fp-icon">⚖️</div>
-        <h4>Önyargı Kaçınılmaz mı?</h4>
+        <h4>Ön Yargı Kaçınılmaz mı?</h4>
         <p>Hayır. Ama önlemek için bilinçli çaba gerekir.</p>
       </div>
       <div class="final-point">
@@ -350,21 +421,20 @@
       </div>
       <div class="final-point">
         <div class="fp-icon">🇹🇷</div>
-        <h4>Türkiye'de Teknoloji</h4>
-        <p>Piri Reis'ten Sabiha Gökçen'e uzanan bir yenilikçilik geleneği var!</p>
+        <h4>Teknolojiyi Sorgula</h4>
+        <p>Teknolojiyi anlayan, sorgulayan ve daha adil sistemler tasarlayan nesil senin neslin!</p>
       </div>
     </div>
 
     <button class="btn btn-restart" id="btn-restart">🔄 Tekrar Oyna</button>
 
-    <div class="story-card" style="max-width:1080px;margin-top:10px;">
-      <h2 style="font-size:0.7rem;">Telif Hakkı ve Atıf Bildirimi</h2>
+    <div class="story-card" style="max-width:860px;margin-top:10px;">
+      <p style="font-size:.78rem;color:var(--muted);margin-bottom:12px;">🎓 Uyarlama: <strong>Dr. Serkan Özel</strong> — Boğaziçi Üniversitesi</p>
+      <h3 style="font-size:.85rem;font-weight:900;">Telif Hakkı ve Atıf Bildirimi</h3>
       <p>Bu uygulama, Artefact Group tarafından geliştirilen <a target="_blank" href="https://mostlikelymachine.artefactgroup.com/">Most Likely Machine</a> projesinin Türkçe uyarlamasıdır.</p>
       <p>Orijinal çalışma <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/deed.tr">Atıf-GayriTicari 4.0 Uluslararası (CC BY-NC 4.0)</a> lisansı altında sunulmaktadır. Türkçe adaptasyon; eğitim ve farkındalık amaçlarıyla, ticari bir nitelik taşımadan ve orijinal lisans koşullarına uygun olarak gerçekleştirilmiştir.</p>
       <p>Original Work Copyright © Artefact Group. Licensed under <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.</p>
     </div>
-
-    
   </section>
 
   <!-- ─── NAV BAR ─────────────────────────────────────── -->
@@ -381,6 +451,16 @@
       <div class="modal-years"></div>
       <div class="modal-bio"></div>
       <button class="btn btn-primary modal-close" id="modal-close-btn">Kapat</button>
+    </div>
+  </div>
+
+  <!-- Argo Uyarı Modal -->
+  <div class="modal-overlay" id="argo-warning-modal">
+    <div class="modal-box">
+      <div style="font-size:2.5rem;margin-bottom:12px">🛑</div>
+      <div class="modal-name">Uygunsuz İfade</div>
+      <div class="modal-bio" style="margin-top:8px">Bu uygulamada saygılı ve uygun bir dil kullanmamız gerekiyor. Lütfen yazdığını düzelt. Birbirimize saygı göstermek güzel bir topluluğun temelidir! 💙</div>
+      <button class="btn btn-primary" id="argo-modal-close" style="margin-top:20px">Anladım, düzeltiyorum ✓</button>
     </div>
   </div>
 
