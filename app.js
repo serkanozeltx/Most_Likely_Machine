@@ -1,15 +1,15 @@
 // ─── DATA ──────────────────────────────────────────────────────────────────
 const STUDENT_PROFILES = [
-  { profileId: 'zeynep', gender: 'kız', img: 'characters/zeynep.jpg', bio: 'Sınıfın en yaratıcı öğrencisi. Her projede farklı bir fikir üretiyor ve grup çalışmalarına renk katıyor.', tags: ['Yaratıcı', 'Kararlı', 'Çok Yönlü'], traitKey: 'zeynep' },
-  { profileId: 'azra', gender: 'kız', img: 'characters/azra.jpg', bio: 'Sınıfın en disiplinli ve özverili öğrencisi. Ödevlerini her zaman zamanında teslim eder, arkadaşlarına da yardım eder.', tags: ['Disiplinli', 'Özverili', 'Güvenilir'], traitKey: 'azra' },
-  { profileId: 'nehir', gender: 'kız', img: 'characters/nehir.jpg', bio: 'Macerayı seven ve cesur kararlar alabilen enerjik bir öğrenci. Okul gezilerinde herkese yön gösteriyor.', tags: ['Maceracı', 'Gözüpek', 'Enerjik'], traitKey: 'nehir' },
-  { profileId: 'yagmur', gender: 'kız', img: 'characters/yagmur.jpg', bio: 'Sınıf başkanı. Söz söyleme gücü ve ikna kabiliyetiyle herkesi etrafında topluyor.', tags: ['Etkili', 'Stratejik', 'Büyüleyici'], traitKey: 'yagmur' },
-  { profileId: 'beren', gender: 'kız', img: 'characters/beren.jpg', bio: 'Ne kadar zor olursa olsun pes etmeyen, azimli bir öğrenci. Sporda ve derslerde aynı kararlılığı gösteriyor.', tags: ['Azimli', 'Kararlı', 'Dayanıklı'], traitKey: 'beren' },
-  { profileId: 'yusuf', gender: 'erkek', img: 'characters/yusuf.jpg', bio: 'Sınıfın doğal lideri. Arkadaşlarını dinler, onları motive eder ve ortak hedefler doğrultusunda organize eder.', tags: ['Lider', 'Cesur', 'Kararlı'], traitKey: 'yusuf' },
-  { profileId: 'eymen', gender: 'erkek', img: 'characters/eymen.jpg', bio: 'Resim yapmayı ve yeni şeyler keşfetmeyi seven yaratıcı bir öğrenci. Her konuda özgün fikirleri var.', tags: ['Yaratıcı', 'Disiplinli', 'Özgün'], traitKey: 'eymen' },
-  { profileId: 'omer', gender: 'erkek', img: 'characters/omer.jpg', bio: 'Okulun en iyi basketbolcusu. Takım ruhuna inanan, azimle çalışan enerjik bir öğrenci.', tags: ['Atletik', 'Enerjik', 'Takım Oyuncusu'], traitKey: 'omer' },
-  { profileId: 'kerem', gender: 'erkek', img: 'characters/kerem.jpg', bio: 'Sınıfın neşe kaynağı! Esprileriyle herkesi güldürüyor, zor anlarda bile pozitif kalmayı biliyor.', tags: ['Neşeli', 'Uyumlu', 'Büyüleyici'], traitKey: 'kerem' },
-  { profileId: 'arda', gender: 'erkek', img: 'characters/arda.jpg', bio: 'Teknolojiyi ve bilimi seven, her şeyin nasıl çalıştığını merak eden bir öğrenci. Bilim fuarlarında hep birinci oluyor.', tags: ['Yenilikçi', 'Meraklı', 'Bağımsız'], traitKey: 'arda' }
+  { profileId: 'zeynep', gender: 'kız', img: 'characters/female_1.jpeg', bio: 'Sınıfın en yaratıcı öğrencisi. Her projede farklı bir fikir üretiyor ve grup çalışmalarına renk katıyor.', tags: ['Yaratıcı', 'Kararlı', 'Çok Yönlü'], traitKey: 'zeynep' },
+  { profileId: 'azra', gender: 'kız', img: 'characters/female_2.jpeg', bio: 'Sınıfın en disiplinli ve özverili öğrencisi. Ödevlerini her zaman zamanında teslim eder, arkadaşlarına da yardım eder.', tags: ['Disiplinli', 'Özverili', 'Güvenilir'], traitKey: 'azra' },
+  { profileId: 'nehir', gender: 'kız', img: 'characters/female_3.jpeg', bio: 'Macerayı seven ve cesur kararlar alabilen enerjik bir öğrenci. Okul gezilerinde herkese yön gösteriyor.', tags: ['Maceracı', 'Gözüpek', 'Enerjik'], traitKey: 'nehir' },
+  { profileId: 'yagmur', gender: 'kız', img: 'characters/female_4.jpeg', bio: 'Sınıf başkanı. Söz söyleme gücü ve ikna kabiliyetiyle herkesi etrafında topluyor.', tags: ['Etkili', 'Stratejik', 'Büyüleyici'], traitKey: 'yagmur' },
+  { profileId: 'beren', gender: 'kız', img: 'characters/female_5.jpeg', bio: 'Ne kadar zor olursa olsun pes etmeyen, azimli bir öğrenci. Sporda ve derslerde aynı kararlılığı gösteriyor.', tags: ['Azimli', 'Kararlı', 'Dayanıklı'], traitKey: 'beren' },
+  { profileId: 'yusuf', gender: 'erkek', img: 'characters/male_1.jpeg', bio: 'Sınıfın doğal lideri. Arkadaşlarını dinler, onları motive eder ve ortak hedefler doğrultusunda organize eder.', tags: ['Lider', 'Cesur', 'Kararlı'], traitKey: 'yusuf' },
+  { profileId: 'eymen', gender: 'erkek', img: 'characters/male_2.jpeg', bio: 'Resim yapmayı ve yeni şeyler keşfetmeyi seven yaratıcı bir öğrenci. Her konuda özgün fikirleri var.', tags: ['Yaratıcı', 'Disiplinli', 'Özgün'], traitKey: 'eymen' },
+  { profileId: 'omer', gender: 'erkek', img: 'characters/male_3.jpeg', bio: 'Okulun en iyi basketbolcusu. Takım ruhuna inanan, azimle çalışan enerjik bir öğrenci.', tags: ['Atletik', 'Enerjik', 'Takım Oyuncusu'], traitKey: 'omer' },
+  { profileId: 'kerem', gender: 'erkek', img: 'characters/male_4.jpeg', bio: 'Sınıfın neşe kaynağı! Esprileriyle herkesi güldürüyor, zor anlarda bile pozitif kalmayı biliyor.', tags: ['Neşeli', 'Uyumlu', 'Büyüleyici'], traitKey: 'kerem' },
+  { profileId: 'arda', gender: 'erkek', img: 'characters/male_5.jpeg', bio: 'Teknolojiyi ve bilimi seven, her şeyin nasıl çalıştığını merak eden bir öğrenci. Bilim fuarlarında hep birinci oluyor.', tags: ['Yenilikçi', 'Meraklı', 'Bağımsız'], traitKey: 'arda' }
 ];
 
 let CHARACTERS = [];
