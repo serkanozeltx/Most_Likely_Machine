@@ -2,7 +2,7 @@
 const STUDENT_PROFILES = [
   { profileId: 'zeynep', gender: 'kız', img: 'characters/female_1.jpeg', bio: 'Sınıfın en yaratıcı öğrencisi. Her projede farklı bir fikir üretiyor ve grup çalışmalarına renk katıyor.', tags: ['Yaratıcı', 'Kararlı', 'Çok Yönlü'], traitKey: 'zeynep' },
   { profileId: 'azra', gender: 'kız', img: 'characters/female_2.jpeg', bio: 'Sınıfın en disiplinli ve özverili öğrencisi. Ödevlerini her zaman zamanında teslim eder, arkadaşlarına da yardım eder.', tags: ['Disiplinli', 'Özverili', 'Güvenilir'], traitKey: 'azra' },
-  { profileId: 'nehir', gender: 'kız', img: 'characters/female_3.jpeg', bio: 'Macerayı seven ve cesur kararlar alabilen enerjik bir öğrenci. Okul gezilerinde herkese yön gösteriyor.', tags: ['Maceracı', 'Gözüpek', 'Enerjik'], traitKey: 'nehir' },
+  { profileId: 'nehir', gender: 'kız', img: 'characters/female_3.jpg', bio: 'Macerayı seven ve cesur kararlar alabilen enerjik bir öğrenci. Okul gezilerinde herkese yön gösteriyor.', tags: ['Maceracı', 'Gözüpek', 'Enerjik'], traitKey: 'nehir' },
   { profileId: 'yagmur', gender: 'kız', img: 'characters/female_4.jpeg', bio: 'Sınıf başkanı. Söz söyleme gücü ve ikna kabiliyetiyle herkesi etrafında topluyor.', tags: ['Etkili', 'Stratejik', 'Büyüleyici'], traitKey: 'yagmur' },
   { profileId: 'beren', gender: 'kız', img: 'characters/female_5.jpeg', bio: 'Ne kadar zor olursa olsun pes etmeyen, azimli bir öğrenci. Sporda ve derslerde aynı kararlılığı gösteriyor.', tags: ['Azimli', 'Kararlı', 'Dayanıklı'], traitKey: 'beren' },
   { profileId: 'yusuf', gender: 'erkek', img: 'characters/male_1.jpeg', bio: 'Sınıfın doğal lideri. Arkadaşlarını dinler, onları motive eder ve ortak hedefler doğrultusunda organize eder.', tags: ['Lider', 'Cesur', 'Kararlı'], traitKey: 'yusuf' },
