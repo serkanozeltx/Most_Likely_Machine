@@ -182,7 +182,7 @@ html, body {
 #screen-1 {
   align-items: center;
   justify-content: center;
-  text-align: center;
+  display: block;
   background: linear-gradient(160deg, #fff 0%, var(--cream) 100%);
 }
 #screen-1 .hero-badge {
@@ -277,7 +277,7 @@ html, body {
   gap: 18px;
   width: 100%;
 }
-.char-card { background: var(--white); border-radius: 4px; padding: 12px 12px 42px 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; cursor: pointer; transition: var(--transition); position: relative; }
+.char-card { background: var(--white); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); text-align: left; cursor: pointer; transition: var(--transition); position: relative; }
 .char-card::before {
   content: '';
   position: absolute;
@@ -289,20 +289,11 @@ html, body {
 }
 .char-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .char-card:hover::before { opacity: 1; }
-.char-img-wrap {
-  border-radius: 4px; overflow: hidden;
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  background: var(--cream);
-}
-.char-img-wrap img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.22); }
-.polaroid-text { position: absolute; left: 0; right: 0; margin-top: 12px; font-weight: 800; font-size: 1.15rem; color: #1e293b; font-family: 'Comic Sans MS', cursive, sans-serif; }
-.char-name { display: none; }
+.char-img-wrap { width: 100%; aspect-ratio: 1; border-radius: 12px; overflow: hidden; margin-bottom: 12px; background: var(--cream); }
+.char-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.char-name { font-weight: 800; font-size: 1.1rem; margin-bottom: 4px; color: var(--dark); display: block; }
 .char-years { font-size: .75rem; color: var(--muted); margin-bottom: 6px; }
-.char-bio { font-size: .8rem; color: var(--muted); margin-top: 36px; margin-bottom: 12px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-align: left; }
+.char-bio { font-size: .8rem; color: var(--muted); margin-bottom: 12px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-align: left; }
 .char-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
 .char-tag {
   font-size: .65rem; font-weight: 700;
@@ -452,7 +443,7 @@ html, body {
 }
 .trait-skip-btn:hover { color: var(--dark); }
 
-.trait-done-msg { text-align: center; margin-bottom: 24px; }
+.trait-done-msg { display: block; margin-bottom: 24px; }
 
 /* Assign columns below */
 .assign-columns {
@@ -529,7 +520,7 @@ html, body {
 .rank-trouble { background: var(--award-trouble); }
 .priority-name { font-weight: 700; font-size: .9rem; flex: 1; }
 .priority-handle { font-size: 1.1rem; opacity: .35; }
-.empty-priority { font-size: .9rem; color: var(--muted); text-align: center; padding: 32px; }
+.empty-priority { font-size: .9rem; color: var(--muted); display: block; padding: 32px; }
 
 /* ─── STEP 8 — RESULTS ──────────────────────────────────────── */
 .results-grid {
@@ -545,7 +536,7 @@ html, body {
   border-radius: calc(var(--radius) * 1.2);
   padding: 24px;
   box-shadow: var(--shadow);
-  text-align: center;
+  display: block;
   animation: popIn .5s cubic-bezier(.34,1.56,.64,1) both;
 }
 .result-card:nth-child(1) { animation-delay: .1s; }
@@ -637,7 +628,7 @@ html, body {
 /* Final screen */
 #screen-11 {
   align-items: center; justify-content: center;
-  text-align: center;
+  display: block;
   background: linear-gradient(160deg, var(--dark) 0%, #334155 100%);
   color: white;
 }
@@ -663,7 +654,10 @@ html, body {
   padding: 10px 24px; font-size: 1rem; margin-bottom: 8px;
 }
 #screen-11 .final-points { max-width: 860px; width: 100%; }
-#screen-11 .story-card { max-width: 860px; padding: 16px 24px; text-align: left; margin-top: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+#screen-11 .story-card { max-width: 860px; padding: 20px 24px; text-align: left; margin-top: 16px; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); color: #E2E8F0; }
+#screen-11 .story-card h3 { color: #FFFFFF; }
+#screen-11 .story-card p { color: #CBD5E1; }
+#screen-11 .story-card a { color: #93C5FD; text-decoration: underline; }
 #screen-11 .final-point p { font-size: .78rem; color: #94A3B8; }
 
 
@@ -692,7 +686,7 @@ html, body {
   max-width: 420px; width: 90%;
   box-shadow: var(--shadow-lg);
   animation: popIn .3s ease;
-  text-align: center;
+  display: block;
 }
 .modal-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top; margin: 0 auto 16px; border: 4px solid var(--cream); box-shadow: var(--shadow); display: block; }
 .modal-name { font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
@@ -705,7 +699,7 @@ html, body {
 .school-input-card {
   background: var(--white); border-radius: var(--radius);
   padding: 28px 32px; box-shadow: var(--shadow);
-  max-width: 680px; margin: 0 auto; text-align: center;
+  max-width: 680px; margin: 0 auto; display: block;
 }
 .school-input-icon { font-size: 2.5rem; margin-bottom: 12px; }
 .school-input-card h3 { font-size: 1.4rem; font-weight: 900; margin-bottom: 8px; }
@@ -715,7 +709,7 @@ html, body {
   width: 100%; padding: 14px 18px;
   border: 2px solid var(--border); border-radius: 4px;
   font-family: var(--font); font-size: 1rem; font-weight: 600;
-  outline: none; transition: var(--transition); text-align: center;
+  outline: none; transition: var(--transition); display: block;
 }
 #school-name-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
 .school-input-hint { font-size: .75rem; color: var(--muted); margin-top: 8px; }
@@ -750,14 +744,14 @@ html, body {
 .name-selection-error {
   background: #FEE2E2; color: #991B1B; border-radius: 4px;
   padding: 14px 20px; font-size: .88rem; font-weight: 700;
-  text-align: center; margin-top: 16px; border: 1px solid #FECACA;
+  display: block; margin-top: 16px; border: 1px solid #FECACA;
 }
 
 /* ─── STEP 5 ERROR ──────────────────────────────────────────── */
 .step5-error {
   background: #FEE2E2; color: #991B1B; border-radius: 4px;
   padding: 14px 20px; font-size: .88rem; font-weight: 700;
-  max-width: 700px; text-align: center; margin: 0 auto 16px;
+  max-width: 700px; display: block; margin: 0 auto 16px;
   border: 1px solid #FECACA;
 }
 

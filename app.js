@@ -486,7 +486,7 @@ function renderCharactersGrid() {
     card.className = 'char-card';
     card.innerHTML = `
       <div class="char-img-wrap"><img src="${c.img}" alt="${c.name}" loading="lazy"></div>
-      <div class="polaroid-text">${c.name}</div>
+      <div class="char-name">${c.name}</div>
       <div class="char-bio">${c.bio}</div>
       <div class="char-tags">${c.tags.map(t => `<span class="char-tag">${t}</span>`).join('')}</div>
     `;
