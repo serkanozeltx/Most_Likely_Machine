@@ -182,7 +182,6 @@ html, body {
 #screen-1 {
   align-items: center;
   justify-content: center;
-  display: block;
   background: linear-gradient(160deg, #fff 0%, var(--cream) 100%);
 }
 #screen-1 .hero-badge {
