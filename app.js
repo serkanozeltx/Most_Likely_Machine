@@ -78,8 +78,7 @@ function containsArgo(text) {
 let state = {
   currentStep: 1,
   totalSteps: 11,
-  schoolName: '',
-  selectedGirlNames: [],
+    selectedGirlNames: [],
   selectedBoyNames: [],
   predictions: { uni: '', viral: '', trouble: '' },
   assignments: { uni: [], viral: [], trouble: [] },
@@ -101,12 +100,6 @@ function buildCharacters(girlNames, boyNames) {
   ];
 }
 
-function updateSchoolName(name) {
-  state.schoolName = name || 'Okulun';
-  document.querySelectorAll('.school-name-display').forEach(el => {
-    el.textContent = state.schoolName;
-  });
-}
 
 function renderNameChips() {
   const girlChips = $('#girl-chips');
@@ -194,8 +187,12 @@ function updateNavButtons(step) {
 
 function buildSelectDropdown(award) {
   const sel = document.getElementById(`select-${award.id}`);
-  const trigger = sel.querySelector('.select-trigger');
+  const oldTrigger = sel.querySelector('.select-trigger');
   const dropdown = sel.querySelector('.select-dropdown');
+  
+  const trigger = oldTrigger.cloneNode(true);
+  oldTrigger.parentNode.replaceChild(trigger, oldTrigger);
+  
   const selectedSpan = trigger.querySelector('.select-value');
   
   dropdown.innerHTML = '';
@@ -205,7 +202,8 @@ function buildSelectDropdown(award) {
     opt.className = 'select-option';
     opt.dataset.value = c.id;
     opt.textContent = c.name;
-    opt.addEventListener('click', () => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
       state.predictions[award.id] = c.id;
       selectedSpan.textContent = c.name;
       trigger.classList.remove('open');
@@ -216,17 +214,13 @@ function buildSelectDropdown(award) {
     dropdown.appendChild(opt);
   });
   
-  // Clean up old event listeners if any, but since we recreate it's fine for simple implementation
-  const newTrigger = trigger.cloneNode(true);
-  trigger.parentNode.replaceChild(newTrigger, trigger);
-  
-  newTrigger.addEventListener('click', (e) => {
+  trigger.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isOpen = newTrigger.classList.contains('open');
+    const isOpen = trigger.classList.contains('open');
     $$('.select-trigger').forEach(t => t.classList.remove('open'));
     $$('.select-dropdown').forEach(d => d.classList.remove('open'));
     if (!isOpen) {
-      newTrigger.classList.add('open');
+      trigger.classList.add('open');
       dropdown.classList.add('open');
     }
   });
@@ -509,13 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
   AWARDS.forEach(a => buildSelectDropdown(a));
   buildTraitsStep();
   
-  $('#school-name-input').addEventListener('blur', (e) => {
-    const val = e.target.value.trim();
-    if (containsArgo(val)) {
-      $('#argo-warning-modal').classList.add('open');
-      e.target.value = '';
-    }
-  });
+
   
   $('#name-search').addEventListener('input', (e) => {
     const val = e.target.value.trim();
@@ -531,9 +519,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   $('#btn-next').addEventListener('click', () => {
-    if (state.currentStep === 2) {
-      updateSchoolName($('#school-name-input').value.trim());
-    }
+
     if (state.currentStep === 3) {
       if (state.selectedGirlNames.length < 5 || state.selectedBoyNames.length < 5) {
         const err = $('#name-selection-error');
@@ -578,7 +564,6 @@ document.addEventListener('DOMContentLoaded', () => {
     restartBtn.addEventListener('click', () => {
       state.currentStep = 1;
       state.schoolName = '';
-      $('#school-name-input').value = '';
       state.selectedGirlNames = [];
       state.selectedBoyNames = [];
       buildCharacters(['Zeynep','Azra','Nehir','Yağmur','Beren'], ['Yusuf','Eymen','Ömer','Kerem','Arda']);

@@ -64,23 +64,13 @@
     <div class="screen-subtitle">Senaryo</div>
     <h2 class="screen-title">Okula Hoş Geldin!</h2>
     
-    <div class="school-name-input-section">
-      <div class="school-input-card">
-        <div class="school-input-icon">🏫</div>
-        <h3>Senin okulun hangisi?</h3>
-        <p>Uygulama boyunca senin okulunun adını kullanacağız. Kendi okulunun adını ya da hayalindeki okulu yazabilirsin!</p>
-        <div class="school-input-wrap">
-          <input type="text" id="school-name-input" placeholder="Okulunun adını yaz..." maxlength="60" autocomplete="off">
-          <div class="school-input-hint">Örnek: Atatürk Ortaokulu, Fatih Ortaokulu, Mavi Gökyüzü Ortaokulu...</div>
-        </div>
+    <div class="story-card" style="margin-top: 20px;">
+      <div class="school-image-banner">
+        <img src="characters/school.jpg" alt="Okul" />
       </div>
-    </div>
-
-    <div class="story-card">
-      <div class="school-badge">🏫 <span class="school-name-display">Okulun</span> &nbsp;·&nbsp; İstanbul</div>
       <h2>Bir Algoritma Karar Verseydi...</h2>
       <p>
-        <span class="school-name-display">Okulun</span>'un yıl sonu ödül töreni yaklaşıyor. Okul müdürü bu yıl çok farklı bir şey denemek istiyor: ödülleri öğrencileri değil, bir <strong>algoritma</strong> belirleyecek!
+        Okulunun yıl sonu ödül töreni yaklaşıyor. Okul müdürü bu yıl çok farklı bir şey denemek istiyor: ödülleri öğretmenler değil, bir <strong>yapay zeka algoritması</strong> belirleyecek!
       </p>
       <p>
         Bu algoritmayı <strong>sen</strong> eğiteceksin. Ama önce sınıfı tanımamız gerekiyor. Bu yıl on öğrenci bu ödüller için yarışıyor — hepsi senin sınıfından.
@@ -106,23 +96,23 @@
   <section class="screen" id="screen-3">
     <div class="screen-subtitle">Adım 3</div>
     <h2 class="screen-title">Sınıfını Oluştur</h2>
-    <p class="screen-body" style="margin-bottom:20px;">Sınıfındaki 10 öğrencinin isimlerini seç — 5 kız, 5 erkek. İstediğin isimlere tıkla!</p>
+    <p class="screen-body" style="margin-bottom:20px;">Sınıfındaki 10 öğrencinin isimlerini seç — 5 kız, 5 erkek. İstediğin isimlere tıkla!<br><small style='color:var(--muted);display:block;margin-top:8px;'>* Buradaki isimler, 2010-2015 yıllarında doğmuş çocuklara Türkiye'de en çok verilen isimlerden derlenmiştir.</small></p>
     
     <div class="name-picker-section">
       <div class="name-picker-counts">
-        <div class="name-count-badge name-count-girl" id="count-girl">👧 Kız: 0 / 5 seçildi</div>
-        <div class="name-count-badge name-count-boy" id="count-boy">👦 Erkek: 0 / 5 seçildi</div>
+        <div class="name-count-badge name-count-girl" id="count-girl">👩 Kız: 0 / 5 seçildi</div>
+        <div class="name-count-badge name-count-boy" id="count-boy">👨 Erkek: 0 / 5 seçildi</div>
       </div>
       
       <input type="text" class="name-picker-search" id="name-search" placeholder="🔍 İsim ara...">
       
       <div class="name-gender-section" id="girl-names-section">
-        <div class="name-gender-title girl-title">👧 Kız İsimleri</div>
+        <div class="name-gender-title girl-title">👩 Kız İsimleri</div>
         <div class="name-chips-grid" id="girl-chips"></div>
       </div>
       
       <div class="name-gender-section" id="boy-names-section">
-        <div class="name-gender-title boy-title">👦 Erkek İsimleri</div>
+        <div class="name-gender-title boy-title">👨 Erkek İsimleri</div>
         <div class="name-chips-grid" id="boy-chips"></div>
       </div>
       
@@ -292,6 +282,12 @@
 
     <div class="compare-section">
       <h3>📊 Senin Tahminlerin — Algoritmanın Kararı</h3>
+      <div class="compare-header">
+        <div class="compare-col-blank"></div>
+        <div class="compare-col-you">👤 Senin Tahminin</div>
+        <div class="compare-col-algo">🤖 Algoritmanın Kararı</div>
+        <div class="compare-col-status">Sonuç</div>
+      </div>
       <div id="compare-list"></div>
       <div class="compare-legend">
         <span class="match-badge match-yes">✓ Uyuştu</span> Hem sen hem algoritma aynı öğrenciyi seçti!
@@ -365,8 +361,8 @@
     <h2 class="screen-title">Algoritmalar Gerçekten Hata Yaptı</h2>
     <p class="screen-body" style="margin-bottom:28px;">Bu örnekler gerçek. Algoritmik ön yargı sadece teorik bir kavram değil — bugün insanların hayatını etkiliyor.</p>
 
-    <div class="reflection-layout">
-      <div style="display:flex;flex-direction:column;gap:16px;">
+    <div class="reflection-layout" style="align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:16px;flex:1;">
         <div class="insight-card">
           <h4>🇬🇧 İngiltere'de Not Algoritması (2020)</h4>
           <p>COVID-19 salgını sırasında İngiltere'de öğrenci sınavları yapılamadı. Bir algoritma notları belirlemek için kullanıldı. Algoritma, zengin okullardaki öğrencilere daha yüksek, yoksul mahallelerdeki öğrencilere ise daha düşük not verdi. Bu durum büyük bir skandala yol açtı ve sistem geri alındı.</p>
@@ -377,12 +373,12 @@
         </div>
         <div class="insight-card" style="border-left-color:var(--award-trouble);">
           <h4>🏥 Sağlık Algoritması ve Irk</h4>
-          <p>ABD'de bir hastane algoritması, hastalara ihtiyaç duydukları bakımı tahmin etmek için "hastane maliyeti" verisini kullandı. Siyah hastalar bu maliyete daha az eriştiği için, daha az bakıma "ihtiyaçları varmış gibi" göründü. Algoritma ırksal bir ayrım yapmak istemiyordu — ama yaptı.</p>
+          <p>ABD'de bir hastane algoritması, hastalara ihtiyaç duydukları bakımı tahmin etmek için "hastane maliyeti" verisini kullandı. Siyahi hastalar bu maliyete daha az eriştiği için, daha az bakıma "ihtiyaçları varmış gibi" göründü. Algoritma ırksal bir ayrım yapmak istemiyordu — ama yaptı.</p>
         </div>
       </div>
 
-      <div>
-        <div class="example-box" style="margin-bottom:16px;">
+      <div style="display:flex;flex-direction:column;gap:16px;flex:1;">
+        <div class="example-box">
           <span class="ex-tag">💬 Düşün ve Tartış</span>
           <h4>Sence ne yapılabilir?</h4>
           <p>Bu algoritmaları kim denetlemeli? Kimler bu kararları vermeliydi? Kullandığın uygulamalarda benzer sorunlar olabilir mi?</p>
@@ -400,8 +396,8 @@
        SCREEN 11 — TAMAMLANDI
   ═══════════════════════════════════════════════════════ -->
   <section class="screen" id="screen-11">
-    <h1>🎉</h1>
-    <p>Kendi algoritmani yazdın, sonuçları gördün ve algoritmik ön yargının gerçek hayattaki etkilerini keşfettin. Artık daha bilinçli bir teknoloji kullanıcısısın!</p>
+    <h2 style="font-size:2rem;margin-bottom:8px;">🎉 Tebrikler!</h2>
+    <p style="margin-bottom:20px;max-width:600px;">Kendi algoritmani yazdın, sonuçları gördün ve algoritmik ön yargının etkilerini keşfettin. Artık daha bilinçli bir teknoloji kullanıcısısın!</p>
 
     <div class="final-points">
       <div class="final-point">
@@ -428,12 +424,14 @@
 
     <button class="btn btn-restart" id="btn-restart">🔄 Tekrar Oyna</button>
 
-    <div class="story-card" style="max-width:860px;margin-top:10px;">
-      <p style="font-size:.78rem;color:var(--muted);margin-bottom:12px;">🎓 Uyarlama: <strong>Dr. Serkan Özel</strong> — Boğaziçi Üniversitesi</p>
-      <h3 style="font-size:.85rem;font-weight:900;">Telif Hakkı ve Atıf Bildirimi</h3>
+    <div class="story-card" style="max-width:860px;margin-top:10px;padding:16px 24px;">
+      <h3 style="font-size:.85rem;font-weight:900;margin-bottom:6px;">Telif Hakkı ve Atıf Bildirimi</h3>
       <p>Bu uygulama, Artefact Group tarafından geliştirilen <a target="_blank" href="https://mostlikelymachine.artefactgroup.com/">Most Likely Machine</a> projesinin Türkçe uyarlamasıdır.</p>
       <p>Orijinal çalışma <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/deed.tr">Atıf-GayriTicari 4.0 Uluslararası (CC BY-NC 4.0)</a> lisansı altında sunulmaktadır. Türkçe adaptasyon; eğitim ve farkındalık amaçlarıyla, ticari bir nitelik taşımadan ve orijinal lisans koşullarına uygun olarak gerçekleştirilmiştir.</p>
       <p>Original Work Copyright © Artefact Group. Licensed under <a target="_blank" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.</p>
+      <p style="font-size:.75rem;color:var(--muted);margin-top:12px;border-top:1px solid var(--border);padding-top:12px;">
+        Uyarlama: <strong>Dr. Serkan Özel</strong> — Boğaziçi Üniversitesi
+      </p>
     </div>
   </section>
 
