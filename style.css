@@ -181,7 +181,8 @@ html, body {
 /* ─── STEP 1 — INTRO ────────────────────────────────────────── */
 #screen-1 {
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 60px;
   background: linear-gradient(160deg, #fff 0%, var(--cream) 100%);
 }
 #screen-1 .hero-badge {
@@ -626,7 +627,7 @@ html, body {
 
 /* Final screen */
 #screen-11 {
-  align-items: center; justify-content: center;
+  align-items: center; justify-content: flex-start; padding-top: 60px;
   background: linear-gradient(160deg, var(--dark) 0%, #334155 100%);
   color: white;
 }
