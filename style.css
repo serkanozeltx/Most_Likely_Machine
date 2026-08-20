@@ -628,7 +628,6 @@ html, body {
 /* Final screen */
 #screen-11 {
   align-items: center; justify-content: center;
-  display: block;
   background: linear-gradient(160deg, var(--dark) 0%, #334155 100%);
   color: white;
 }
