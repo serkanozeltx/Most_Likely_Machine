@@ -291,7 +291,6 @@ html, body {
 .char-card:hover::before { opacity: 1; }
 .char-img-wrap { width: 100%; aspect-ratio: 1; border-radius: 12px; overflow: hidden; margin-bottom: 12px; background: var(--cream); }
 .char-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
-.char-name { font-weight: 800; font-size: 1.1rem; margin-bottom: 4px; color: var(--dark); text-align: center; }
 .char-years { font-size: .75rem; color: var(--muted); margin-bottom: 6px; }
 .char-bio { font-size: .8rem; color: var(--muted); margin-bottom: 12px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-align: left; }
 .char-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
@@ -554,7 +553,7 @@ html, body {
 }
 .result-img {
   width: 90px; height: 90px;
-  border-radius: 50%;
+  border-radius: 4px;
   object-fit: cover; object-position: top;
   margin: 0 auto 12px;
   border: 4px solid white;
@@ -687,7 +686,7 @@ html, body {
   animation: popIn .3s ease;
   display: block;
 }
-.modal-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top; margin: 0 auto 16px; border: 4px solid var(--cream); box-shadow: var(--shadow); display: block; }
+.modal-img { width: 120px; height: 120px; border-radius: 4px; object-fit: cover; object-position: top; margin: 0 auto 16px; border: 4px solid var(--cream); box-shadow: var(--shadow); display: block; }
 .modal-name { font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
 .modal-years { font-size: .82rem; color: var(--muted); margin-bottom: 12px; }
 .modal-bio { font-size: .9rem; color: var(--muted); line-height: 1.65; }
@@ -828,4 +827,40 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover; object-position: top;
+}
+
+.char-img-wrap {
+  position: relative;
+  /* ... existing styles untouched because we append this ... */
+}
+.polaroid-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18%; /* Covers the bottom white space of the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Patrick Hand', 'Comic Sans MS', cursive;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: #1e293b;
+  transform: rotate(-1.5deg); /* Slight handwriting tilt */
+}
+.result-img-wrapper {
+  position: relative;
+}
+.polaroid-name-result {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Patrick Hand', 'Comic Sans MS', cursive;
+  font-size: 1rem;
+  color: #1e293b;
+  transform: rotate(-1.5deg);
 }

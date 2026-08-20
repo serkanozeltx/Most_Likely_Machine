@@ -437,8 +437,10 @@ function renderResults() {
     card.className = 'result-card';
     card.innerHTML = `
       <div class="result-award-badge" style="${award.badgeStyle}">${award.icon} ${award.label}</div>
-      <div class="result-img-wrapper"><img class="result-img" src="${result.char.img}" alt="${result.char.name}"></div>
-      <div class="result-name">${result.char.name}</div>
+      <div class="result-img-wrapper">
+        <img class="result-img" src="${result.char.img}" alt="${result.char.name}">
+        <div class="polaroid-name-result">${result.char.name}</div>
+      </div>
       <div class="result-score">Algoritma puanı: ${result.score}</div>
     `;
     grid.appendChild(card);
@@ -485,8 +487,10 @@ function renderCharactersGrid() {
     const card = document.createElement('div');
     card.className = 'char-card';
     card.innerHTML = `
-      <div class="char-img-wrap"><img src="${c.img}" alt="${c.name}" loading="lazy"></div>
-      <div class="char-name">${c.name}</div>
+      <div class="char-img-wrap">
+        <img src="${c.img}" alt="${c.name}" loading="lazy">
+        <div class="polaroid-name">${c.name}</div>
+      </div>
       <div class="char-bio">${c.bio}</div>
       <div class="char-tags">${c.tags.map(t => `<span class="char-tag">${t}</span>`).join('')}</div>
     `;
