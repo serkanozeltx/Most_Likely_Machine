@@ -92,11 +92,12 @@ const charById = (id) => CHARACTERS.find(c => c.id === id);
 const traitById = (id) => TRAITS.find(t => t.id === id);
 
 function buildCharacters(girlNames, boyNames) {
+  const formatName = name => name ? name.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLocaleLowerCase('tr-TR')).join(' ') : name;
   const girls = STUDENT_PROFILES.filter(p => p.gender === 'kız');
   const boys = STUDENT_PROFILES.filter(p => p.gender === 'erkek');
   CHARACTERS = [
-    ...girls.map((p, i) => ({ ...p, id: p.profileId, name: girlNames[i] || p.profileId })),
-    ...boys.map((p, i) => ({ ...p, id: p.profileId, name: boyNames[i] || p.profileId }))
+    ...girls.map((p, i) => ({ ...p, id: p.profileId, name: formatName(girlNames[i]) || formatName(p.profileId) })),
+    ...boys.map((p, i) => ({ ...p, id: p.profileId, name: formatName(boyNames[i]) || formatName(p.profileId) }))
   ];
 }
 
