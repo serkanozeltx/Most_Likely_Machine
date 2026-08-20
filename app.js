@@ -252,6 +252,7 @@ function showCurrentTrait() {
   const showcase = document.getElementById('trait-showcase');
   const doneMsg = document.getElementById('trait-done-msg');
   $('#step5-error').style.display = 'none';
+  $('#step6-error').style.display = 'none';
   
   if (traitQueue.length === 0) {
     showcase.style.display = 'none';
@@ -436,7 +437,7 @@ function renderResults() {
     card.className = 'result-card';
     card.innerHTML = `
       <div class="result-award-badge" style="${award.badgeStyle}">${award.icon} ${award.label}</div>
-      <img class="result-img" src="${result.char.img}" alt="${result.char.name}">
+      <div class="result-img-wrapper"><img class="result-img" src="${result.char.img}" alt="${result.char.name}"></div>
       <div class="result-name">${result.char.name}</div>
       <div class="result-score">Algoritma puanı: ${result.score}</div>
     `;
@@ -485,7 +486,7 @@ function renderCharactersGrid() {
     card.className = 'char-card';
     card.innerHTML = `
       <div class="char-img-wrap"><img src="${c.img}" alt="${c.name}" loading="lazy"></div>
-      <div class="char-name">${c.name}</div>
+      <div class="polaroid-text">${c.name}</div>
       <div class="char-bio">${c.bio}</div>
       <div class="char-tags">${c.tags.map(t => `<span class="char-tag">${t}</span>`).join('')}</div>
     `;
@@ -531,9 +532,22 @@ document.addEventListener('DOMContentLoaded', () => {
       renderCharactersGrid();
       AWARDS.forEach(a => buildSelectDropdown(a));
     }
+    
+    if (state.currentStep === 5) {
+      if (!state.predictions.uni || !state.predictions.viral || !state.predictions.trouble) {
+        const err = $('#step5-error');
+        if (err) {
+          err.textContent = 'Lütfen ilerlemeden önce 3 ödül için de tahminini yap.';
+          err.style.display = 'block';
+        } else {
+          alert('Lütfen ilerlemeden önce 3 ödül için de tahminini yap.');
+        }
+        return;
+      }
+    }
     if (state.currentStep === 6) {
       if (traitQueue.length > 0) {
-        const err = $('#step5-error');
+        const err = $('#step6-error');
         err.textContent = 'Lütfen tüm özellikleri bir ödüle atayın.';
         err.style.display = 'block';
         return;

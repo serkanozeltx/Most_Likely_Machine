@@ -277,16 +277,7 @@ html, body {
   gap: 18px;
   width: 100%;
 }
-.char-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 16px;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
+.char-card { background: var(--white); border-radius: 4px; padding: 12px 12px 42px 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; cursor: pointer; transition: var(--transition); position: relative; }
 .char-card::before {
   content: '';
   position: absolute;
@@ -298,18 +289,20 @@ html, body {
 }
 .char-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .char-card:hover::before { opacity: 1; }
-.char-img-wrap { overflow: hidden;
+.char-img-wrap {
+  border-radius: 4px; overflow: hidden;
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
   margin-bottom: 12px;
   background: var(--cream);
 }
-.char-img-wrap img { width: 100%; height: 115%; object-fit: cover; object-position: top; object-position: top; margin-top: 0; }
-.char-name { font-weight: 800; font-size: .9rem; margin-bottom: 2px; }
+.char-img-wrap img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.22); }
+.polaroid-text { position: absolute; left: 0; right: 0; margin-top: 12px; font-weight: 800; font-size: 1.15rem; color: #1e293b; font-family: 'Comic Sans MS', cursive, sans-serif; }
+.char-name { display: none; }
 .char-years { font-size: .75rem; color: var(--muted); margin-bottom: 6px; }
-.char-bio { font-size: .75rem; color: var(--muted); line-height: 1.45; }
+.char-bio { font-size: .8rem; color: var(--muted); margin-top: 36px; margin-bottom: 12px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-align: left; }
 .char-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
 .char-tag {
   font-size: .65rem; font-weight: 700;
@@ -366,7 +359,7 @@ html, body {
   top: calc(100% + 6px);
   left: 0; right: 0;
   background: var(--white);
-  border-radius: 12px;
+  border-radius: 4px;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   z-index: 200;
@@ -514,7 +507,7 @@ html, body {
 /* ─── STEP 7 — FINE TUNE ────────────────────────────────────── */
 .priority-item {
   background: var(--white);
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 14px 18px;
   margin-bottom: 8px;
   display: flex; align-items: center; gap: 14px;
@@ -583,7 +576,7 @@ html, body {
 .compare-row {
   display: flex; align-items: center; gap: 12px;
   margin-bottom: 10px;
-  background: var(--white); border-radius: 12px; padding: 12px 16px;
+  background: var(--white); border-radius: 4px; padding: 12px 16px;
   box-shadow: var(--shadow);
 }
 .compare-award { font-size: .78rem; font-weight: 800; width: 130px; flex-shrink: 0; }
@@ -629,7 +622,7 @@ html, body {
 .bias-types { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
 .bias-item {
   display: flex; gap: 14px; align-items: flex-start;
-  background: var(--white); border-radius: 12px; padding: 16px;
+  background: var(--white); border-radius: 4px; padding: 16px;
   box-shadow: var(--shadow);
 }
 .bias-num {
@@ -648,14 +641,11 @@ html, body {
   background: linear-gradient(160deg, var(--dark) 0%, #334155 100%);
   color: white;
 }
-#screen-11 h1 {
-  font-size: 2.8rem; font-weight: 900;
-  background: linear-gradient(135deg, var(--gold), var(--red-light));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  margin-bottom: 16px;
+#screen-11 h2 {
+  font-size: 1.8rem !important; margin-bottom: 8px !important;
 }
-#screen-11 > p { font-size: 1.05rem; color: #94A3B8; max-width: 520px; line-height: 1.7; margin: 0 auto 32px; }
-.final-points { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+#screen-11 > p { font-size: .95rem; color: #94A3B8; max-width: 600px; line-height: 1.5; margin: 0 auto 16px; }
+.final-points { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; width: 100%; margin-bottom: 8px; }
 .final-point {
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.12);
@@ -670,9 +660,10 @@ html, body {
 #screen-11 .btn-restart {
   background: linear-gradient(135deg, var(--red), var(--gold));
   color: white; box-shadow: 0 4px 20px rgba(230,57,70,.3);
+  padding: 10px 24px; font-size: 1rem; margin-bottom: 8px;
 }
 #screen-11 .final-points { max-width: 860px; width: 100%; }
-#screen-11 .story-card { max-width: 860px; padding: 24px 32px; text-align: left; margin-top: 10px; }
+#screen-11 .story-card { max-width: 860px; padding: 16px 24px; text-align: left; margin-top: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
 #screen-11 .final-point p { font-size: .78rem; color: #94A3B8; }
 
 
@@ -722,7 +713,7 @@ html, body {
 .school-input-wrap { max-width: 420px; margin: 0 auto; }
 #school-name-input {
   width: 100%; padding: 14px 18px;
-  border: 2px solid var(--border); border-radius: 12px;
+  border: 2px solid var(--border); border-radius: 4px;
   font-family: var(--font); font-size: 1rem; font-weight: 600;
   outline: none; transition: var(--transition); text-align: center;
 }
@@ -757,14 +748,14 @@ html, body {
 .name-chip.selected-boy { background: #F0FDF4; border-color: #15803D; color: #15803D; }
 .name-chip.chip-disabled { opacity: .35; cursor: not-allowed; }
 .name-selection-error {
-  background: #FEE2E2; color: #991B1B; border-radius: 12px;
+  background: #FEE2E2; color: #991B1B; border-radius: 4px;
   padding: 14px 20px; font-size: .88rem; font-weight: 700;
   text-align: center; margin-top: 16px; border: 1px solid #FECACA;
 }
 
 /* ─── STEP 5 ERROR ──────────────────────────────────────────── */
 .step5-error {
-  background: #FEE2E2; color: #991B1B; border-radius: 12px;
+  background: #FEE2E2; color: #991B1B; border-radius: 4px;
   padding: 14px 20px; font-size: .88rem; font-weight: 700;
   max-width: 700px; text-align: center; margin: 0 auto 16px;
   border: 1px solid #FECACA;
@@ -824,7 +815,7 @@ html, body {
   align-items: center;
   padding: 14px 16px;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 4px;
   margin-bottom: 8px;
   background: var(--white);
 }

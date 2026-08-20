@@ -64,7 +64,7 @@
     <div class="screen-subtitle">Senaryo</div>
     <h2 class="screen-title">Okula Hoş Geldin!</h2>
     
-    <div class="story-card" style="margin-top: 20px;">
+    <div class="story-card" style="margin-top: 10px; max-width: 900px;">
       <div class="school-image-banner">
         <img src="characters/school.jpg" alt="Okul" />
       </div>
@@ -99,6 +99,7 @@
     <p class="screen-body" style="margin-bottom:20px;">Sınıfındaki 10 öğrencinin isimlerini seç — 5 kız, 5 erkek. İstediğin isimlere tıkla!<br><small style='color:var(--muted);display:block;margin-top:8px;'>* Buradaki isimler, 2010-2015 yıllarında doğmuş çocuklara Türkiye'de en çok verilen isimlerden derlenmiştir.</small></p>
     
     <div class="name-picker-section">
+      <div class="name-selection-error" id="name-selection-error" style="display:none; margin-bottom:16px;"></div>
       <div class="name-picker-counts">
         <div class="name-count-badge name-count-girl" id="count-girl">👩 Kız: 0 / 5 seçildi</div>
         <div class="name-count-badge name-count-boy" id="count-boy">👨 Erkek: 0 / 5 seçildi</div>
@@ -116,8 +117,7 @@
         <div class="name-chips-grid" id="boy-chips"></div>
       </div>
       
-      <div class="name-selection-error" id="name-selection-error" style="display:none"></div>
-    </div>
+      </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════
@@ -136,6 +136,7 @@
   <section class="screen" id="screen-5">
     <div class="screen-subtitle">Adım 5</div>
     <h2 class="screen-title">Tahminini Yap</h2>
+    <div class="step5-error" id="step5-error" style="display:none; max-width:600px; margin: 0 auto 16px;"></div>
     <div class="predictions-layout">
       <div class="predictions-info">
         <p class="screen-body">
@@ -193,7 +194,7 @@
     <h2 class="screen-title">Algoritmayı Eğit</h2>
     <p class="screen-body" style="margin-bottom:20px;">Her özellik için hangi ödüle ait olduğunu seç. Algoritma bu eşleştirmelere göre kazananı belirleyecek!</p>
 
-    <div class="step5-error" id="step5-error" style="display:none"></div>
+    <div class="step5-error" id="step6-error" style="display:none"></div>
 
     <!-- Current trait card -->
     <div class="trait-showcase" id="trait-showcase">
@@ -444,7 +445,7 @@
   <!-- ─── CHARACTER MODAL ────────────────────────────── -->
   <div class="modal-overlay" id="char-modal">
     <div class="modal-box">
-      <img class="modal-img" src="" alt="">
+      <div class="modal-img-wrapper"><img class="modal-img" src="" alt=""></div>
       <div class="modal-name"></div>
       <div class="modal-years"></div>
       <div class="modal-bio"></div>
